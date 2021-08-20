@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "805094132941",
+    "project_id": "muxer-52a6b",
+    "storage_bucket": "muxer-52a6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805094132941:android:3f436caffeae0f939aed84",
+        "android_client_info": {
+          "package_name": "com.muxable.muxer.modem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805094132941-n5hj11ve8siktnrkm6u3fs8jmsqcklej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTA7DQnTKrv096ZUlAtF6gXXW1A6pS94Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805094132941-n5hj11ve8siktnrkm6u3fs8jmsqcklej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
