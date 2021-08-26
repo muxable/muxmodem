@@ -7,10 +7,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:modem/models/network.dart';
+import 'package:modem/models/thermal.dart';
 import 'package:modem/models/user.dart';
 import 'package:modem/screens/home.dart';
-import 'package:modem/screens/settings.dart';
-import 'package:modem/screens/sign_in.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -66,24 +66,18 @@ class App extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => UserModel()),
+        ChangeNotifierProvider(create: (context) => ThermalModel()),
+        ChangeNotifierProvider(create: (context) => NetworkModel()),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'MuxModem',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
         initialRoute: '/',
         navigatorObservers: [observer],
         routes: {
-          '/': (context) {
-            return Consumer<UserModel>(builder: (context, model, child) {
-              if (!model.isSignedIn()) {
-                return const SignInScreen();
-              }
-              return const HomeScreen();
-            });
-          },
-          '/settings': (context) => const SettingsScreen(),
+          '/': (context) => const HomeScreen(),
         },
       ),
     );
